@@ -41,3 +41,4 @@ ro.vendor.hw.nfc=samsung
 persist.vendor.radio.fetchqos=true
 persist.vendor.rcs.singlereg.feature=1
 ro.vendor.radio.imei.sv=16
+persist.radio.multisim.config=dsds
