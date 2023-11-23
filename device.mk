@@ -37,7 +37,9 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mmi.overlay.rc
+    init.mmi.overlay.rc \
+    init.oem.fingerprint.overlay.sh \
+    init.oem.fingerprint2.sh
 
 # Shipping level
 PRODUCT_SHIPPING_API_LEVEL := 31
