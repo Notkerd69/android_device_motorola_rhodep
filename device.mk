@@ -17,7 +17,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Overlay
 PRODUCT_PACKAGES += \
-    SettingsProviderResRhodep
+    FrameworksResRhodep \
+    LineageSystemUIRhodep \
+    SettingsProviderResRhodep \
+    SystemUIResRhodep
 
 # Audio
 PRODUCT_COPY_FILES += \
