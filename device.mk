@@ -18,6 +18,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworksResRhodep \
+    LineageSettingsRhodep \
     LineageSystemUIRhodep \
     SettingsProviderResRhodep \
     SystemUIResRhodep
