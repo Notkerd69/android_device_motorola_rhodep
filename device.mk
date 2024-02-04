@@ -96,9 +96,8 @@ PRODUCT_BOOT_JARS += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service.samsung \
     com.android.nfc_extras \
-    NfcNci \
-    SecureElement \
     Tag
 
 # Perf
