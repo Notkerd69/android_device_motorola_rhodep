@@ -67,5 +67,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Inherit from motorola sm6375-common
 $(call inherit-product, device/motorola/sm6375-common/common.mk)
 
+# Perf
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
+    system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/rhodep/rhodep-vendor.mk)
