@@ -30,6 +30,9 @@ vendor.display.disable_dynamic_sf_idle=1
 vendor.display.idle_time=0
 vendor.hw.sf.IdleLazyResetThresholdT=1000
 
+# NFC
+ro.vendor.hw.nfc=samsung
+
 # Radio
 persist.vendor.radio.fetchqos=true
 persist.vendor.rcs.singlereg.feature=1

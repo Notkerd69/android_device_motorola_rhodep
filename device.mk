@@ -44,6 +44,13 @@ PRODUCT_PACKAGES += \
     init.oem.fingerprint.overlay.sh \
     init.oem.fingerprint2.sh
 
+# NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    NfcNci \
+    SecureElement \
+    Tag
+
 # Shipping level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
