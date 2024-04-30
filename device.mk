@@ -38,6 +38,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-egis.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-egis.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-focal.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-focal.k
 
+# FM
+TARGET_HAS_FM := true
+
 # Init
 PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \

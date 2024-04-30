@@ -20,6 +20,9 @@ bluetooth.device.default_name=moto g82 5G
 # Camera
 persist.vendor.camera.physical.num=4
 
+# FM
+vendor.qcom.bluetooth.soc=cherokee
+
 # Graphics
 debug.sf.latch_unsignaled=1
 debug.sf.predict_hwc_composition_strategy=0
