@@ -1,8 +1,8 @@
 # Bluetooth
-bluetooth.device.default_name=moto g53j 5G
+bluetooth.device.default_name=moto g82 5G
 
 # Camera
-persist.vendor.camera.physical.num=3
+persist.vendor.camera.physical.num=4
 
 # FM
 vendor.qcom.bluetooth.soc=cherokee
@@ -12,12 +12,10 @@ ro.vendor.fm.use_audio_session=true
 ro.mot.build.customerid=global
 
 # NFC
-ro.vendor.hw.nfc=ese_nq
-ro.hardware.nfc_nci=pn54x
-persist.nfc_cfg.config_file_name=libnfc-nci_SN100.conf
+ro.vendor.hw.nfc=samsung
 
 # SOC
-ro.soc.model=SM4350
+ro.soc.model=SM6375
 
 # Surfaceflinger
 ro.surface_flinger.has_HDR_display=false

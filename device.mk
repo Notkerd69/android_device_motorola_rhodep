@@ -7,18 +7,17 @@
 TARGET_HAS_FM := true
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1200
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 # Screen
-TARGET_SCREEN_DENSITY := 280
+TARGET_SCREEN_DENSITY := 400
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := 280dpi
-PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Inherit from motorola sm6375-common
 $(call inherit-product, device/motorola/sm6375-common/common.mk)
@@ -32,18 +31,13 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResPenang \
-    LineageSystemUIPenang \
-    LineageSettingsPenang \
-    SettingsProviderResPenang \
-    SystemUIResPenang \
-    EuiccOverlayPenang \
-    RegulatoryInfoOverlayPenang
-
-PRODUCT_PACKAGES += \
-    FrameworksResPenangSB \
-    SettingsProviderResPenangSB \
-    RegulatoryInfoOverlayPenangSB    
+    FrameworksResRhodep \
+    LineageSystemUIRhodep \
+    LineageSettingsRhodep \
+    SettingsProviderResRhodep \
+    SystemUIResRhodep \
+    EuiccOverlayRhodep \
+    RegulatoryInfoOverlayRhodep
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
@@ -59,10 +53,10 @@ PRODUCT_PACKAGES += \
     com.motorola.hardware.biometric.fingerprint@1.0.vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc \
-    $(LOCAL_PATH)/configs/idc/uinput-fpsensor.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpsensor.idc \
-    $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
-    $(LOCAL_PATH)/configs/keylayout/uinput-fpsensor.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpsensor.kl
+    $(LOCAL_PATH)/configs/idc/uinput-egis.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-egis.idc \
+    $(LOCAL_PATH)/configs/idc/uinput-focal.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-focal.idc \
+    $(LOCAL_PATH)/configs/keylayout/uinput-egis.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-egis.kl \
+    $(LOCAL_PATH)/configs/keylayout/uinput-focal.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-focal.kl
 
 # Init
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc),\
@@ -84,10 +78,6 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
-# IPC router config
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.1.vendor \
@@ -106,28 +96,10 @@ PRODUCT_BOOT_JARS += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.nxp \
-    android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
-    libchrome.vendor \
     NfcNci \
     SecureElement \
     Tag
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
-
-# Felica
-#-include vendor/motorola/felica/config.mk
 
 # Perf
 PRODUCT_COPY_FILES += \
@@ -135,4 +107,4 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/penang/penang-vendor.mk)
+$(call inherit-product, vendor/motorola/rhodep/rhodep-vendor.mk)

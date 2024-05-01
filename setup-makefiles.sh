@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=penang
+DEVICE=rhodep
 VENDOR=motorola
 
 # Load extract_utils and do some sanity checks
@@ -34,7 +34,7 @@ write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
 # Recovery
 echo 'PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/motorola/penang/proprietary/vendor/firmware,$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware)' >> "${BOARDMK}"
+    $(call find-copy-subdir-files,*,vendor/motorola/rhodep/proprietary/vendor/firmware,$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware)' >> "${BOARDMK}"
 
 # Finish
 write_footers
