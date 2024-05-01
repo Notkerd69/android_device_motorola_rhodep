@@ -29,5 +29,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := motorola/rhodep_g/rhodep:13/T1SUS33.1-124-6-3/1f802-e899d:user/release-keys
 
-# Gapps
-TARGET_USES_MINI_GAPPS := true
+# MindTheGapps
+TARGET_IS_GROUPER := true
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
