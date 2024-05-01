@@ -5,7 +5,7 @@
 //
 
 cc_library_static {
-    name: "libinit_penang",
+    name: "libinit_rhodep",
     srcs: [
         "libinit_dalvik_heap.cpp",
         "libinit_variant.cpp",
