@@ -19,6 +19,11 @@ TARGET_SCREEN_DENSITY := 400
 BOARD_KERNEL_CMDLINE += androidboot.hab.product=rhodep
 TARGET_KERNEL_CONFIG += vendor/rhodep_defconfig
 
+# Clang
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_CLANG_VERSION := r450784e
+
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
