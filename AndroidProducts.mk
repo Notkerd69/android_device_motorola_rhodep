@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2023 The LineageOS Project
+# Copyright (C) 2023 The voltageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rhodep.mk
+    $(LOCAL_DIR)/voltage_rhodep.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_rhodep-user \
-    lineage_rhodep-userdebug \
-    lineage_rhodep-eng
+    voltage_rhodep-user \
+    voltage_rhodep-userdebug \
+    voltage_rhodep-eng

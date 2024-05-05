@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023 The LineageOS Project
+# Copyright (C) 2023 The voltageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -11,11 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from rhodep device
 $(call inherit-product, device/motorola/rhodep/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common voltage stuff.
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_rhodep
+PRODUCT_NAME := voltage_rhodep
 PRODUCT_DEVICE := rhodep
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
